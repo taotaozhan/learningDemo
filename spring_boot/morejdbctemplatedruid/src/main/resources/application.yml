@@ -1,0 +1,16 @@
+server:
+  port: 7003
+spring:
+  datasource:
+    druid:
+      mysql1:
+        url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+        username: root
+        password: ZhangTao521#
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      mysql2:
+        url: jdbc:mysql://localhost:3306/temp?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+        username: root
+        password: ZhangTao521#
+        driver-class-name: com.mysql.cj.jdbc.Driver
+

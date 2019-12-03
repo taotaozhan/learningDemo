@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+        <div id="root">{{ number }}</div>
+
+        <div id="app-1">
+          <span v-bind:title="message">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息
+           </span>
+        </div>
+
+        <div id="app-2">
+          <p v-if="seen">
+            现在你看到我了
+          </p>
+        </div>
+
+        <div id="app-3">
+          <ol>
+            <li v-for="todo in todos">
+              {{todo.text}}
+            </li>
+          </ol>
+        </div>
+
+        <div id="app-5">
+          <p>
+            {{ message }}
+          </p>
+          <button v-on:click ="reverse">反转消息</button>
+        </div>
+
+
+        <script>
+          new Vue({
+            el:'#root',
+            data:{
+              msg:'hekkafkdoeoo',
+              number: 12213
+            }
+          });
+          new Vue({
+            el:'#app-1',
+            data:{
+              message:'页面加载与'+new Date().toLocaleDateString()
+            }
+          });
+          new Vue({
+            el:'#app-2',
+              data: {
+              seen:false
+            }
+          });
+
+          new Vue({
+            el:'#app-3',
+            data:{
+              todos:[
+                {text:'学习背景独守空房'},
+                {text:'学习springcloud'}
+              ]
+            }
+          });
+
+     new Vue({
+            el:'#app-5',
+            data:{
+              message:'Hello Vue.js'
+            },
+            method:{
+              reverse:function () {
+                this.message = this.message.split('').reverse().join('')
+              }
+            }
+          });
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+server:
+  port: 9001
+spring:
+  mail:
+    host: smtp.qq.com
+    username: 1186447959@qq.com
+    password: wlyuxuhovhmwhdeh
+
+
+
+
+
+
+

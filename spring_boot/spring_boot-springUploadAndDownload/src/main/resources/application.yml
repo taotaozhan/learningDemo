@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: sit
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+server:
+  port: 8070
+  tomcat:
+    uri-encoding: UTF-8
+
+upload: #文件上传配置
+  localtion:  #配置默认文件保存位置
+    windows: E:/springboot-upload/image/
+    linux: /dreamhai/springboot-upload/image/
+  maxFileSize: 10240KB #单个文件最大KB/MB
+  maxRequestSize: 102400KB   #设置总上传数据总大小
+

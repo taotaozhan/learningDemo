@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div id="app-5">
+  <p>
+    {{ message }}
+  </p>
+    <button v-on:click ="reverse">反转消息</button>
+</div>
+<div id="app-6">
+  <p>
+    {{ msg }}
+  </p>
+  <input v-model="msg">
+</div>
+
+<div id="example1">
+  <button v-on:click="counter" += "1">Add 1</button>
+  <p>The button above has been clicked{{counter}}times</p>
+</div>
+
+
+<script>
+  new Vue({
+    el:'#example1',
+    data:{
+      counter:0
+    }
+  });
+
+
+   new Vue({
+    el:'#app-5',
+    data:{
+      message:'Hello Vue.js'
+    },
+    method:{
+      reverse:function () {
+        this.message = this.message.split('').reverse().join('')
+      }
+    }
+  });
+  new Vue({
+    el:'#app-6',
+    data:{
+      msg:'skdkkkdd'
+    }
+  });
+
+</script>
+
+</body>
+</html>
