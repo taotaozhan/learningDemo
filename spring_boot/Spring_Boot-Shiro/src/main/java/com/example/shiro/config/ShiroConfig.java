@@ -27,7 +27,7 @@ public class ShiroConfig {
     //登录的URL
     shiroFilterFactoryBean.setLoginUrl("/login");
     //登陆成功后跳转的URL
-    shiroFilterFactoryBean.setUnauthorizedUrl("/index");
+    shiroFilterFactoryBean.setSuccessUrl("/index");
     //未授权URL
     shiroFilterFactoryBean.setUnauthorizedUrl("/403");
 
