@@ -42,6 +42,4 @@ public class Send {
     channel.close();
     connection.close();
   }
-
-
 }
