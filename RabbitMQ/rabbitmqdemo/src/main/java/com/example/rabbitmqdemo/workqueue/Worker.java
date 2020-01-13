@@ -47,5 +47,4 @@ public class Worker {
     String[] taskArr = task.split(":");
     TimeUnit.SECONDS.sleep(Long.valueOf(taskArr[1]));
   }
-
 }
