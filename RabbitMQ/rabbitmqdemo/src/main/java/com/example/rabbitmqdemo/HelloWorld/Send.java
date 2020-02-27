@@ -17,6 +17,9 @@ public class Send {
   public final static String QUEUE_NAME = "hello";
   public static void main(String[] args) throws IOException, TimeoutException {
 
+
+
+
     //创建连接
     ConnectionFactory factory = new ConnectionFactory();
     //设置RabbitMQ的主机名
